@@ -1,0 +1,31 @@
+{
+  "name": "lesson-27",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "del": "^6.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.51.0",
+    "webpack": "^5.72.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "swiper": "^8.1.5"
+  },
+  "description": ""
+}
