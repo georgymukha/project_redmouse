@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+.banner {
+    position: relative;
+    background-image: url(../img/main-banner.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        padding-top: 17%;
+        padding-left: 8%;
+        width: 50%;
+    }
+
+    &__button {
+        margin-left: 8%;
+        margin-top: 2.6%;
+        margin-bottom: 20%;
+    }
+}

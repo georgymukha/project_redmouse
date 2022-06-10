@@ -1,0 +1,119 @@
+.header {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+
+    @media screen and (min-width: 480px) {
+        
+    }
+}
+
+.logo {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+    }
+
+    &__icon {
+
+    }
+
+    &__text {
+
+    }
+}
+
+.navbar {
+    z-index: 100;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    visibility: hidden;
+    transition: .4s;
+
+    &.is-active {
+        background-color: rgba(255, 255, 255, 1);
+        visibility: visible;
+
+        .navbar__link {
+            color: #FF715B;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #ff715b00;
+        text-transform: uppercase;
+        transition: .4s;
+    }
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+
+    &__auth {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 30px;
+        height: 30px;
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            background-image: url(../img/auth.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        display: none;
+    }
+
+    &__sep {
+        height: 0px;
+        width: 30px;
+        border: 1px solid #F1E0DD;
+        transform: rotate(90deg);
+    }
+
+    &__search {
+        position: relative;
+        height: 30px;
+        width: 30px;
+
+        &-icon {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+
+    
+}
