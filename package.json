@@ -24,9 +24,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gsap": "^3.10.4",
     "hamburgers": "^1.2.1",
-    "jquery": "^3.6.0",
-    "swiper": "^8.1.5"
+    "jquery": "^3.6.0"
   },
   "description": ""
 }

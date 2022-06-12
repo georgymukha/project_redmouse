@@ -40,10 +40,127 @@
         </header>
         <main class="main">
             <section class="banner">
-                <h1 class="banner__title">
-                    It’s Time To Explore The World
-                </h1>
-                <button class="banner__button btn">Plan Your Trip</button>
+                <div class="banner-slider owl-carousel owl-theme">
+                    <div class="banner-slider__slide">
+                        <img src="./img/banner-1.png" alt="">
+                        <div class="banner__forward">
+                            <h1 class="banner__title">
+                                It’s Time To Explore The World
+                            </h1>
+                            <button class="banner__button btn">Plan Your Trip</button>
+                        </div>
+                    </div>
+                    <div class="banner-slider__slide">
+                        <img src="./img/banner-2.jpg" alt="">
+                        <div class="banner__forward">
+                            <h1 class="banner__title">
+                                It’s Time To Seak The Unknown
+                            </h1>
+                            <button class="banner__button btn">Plan Your Trip</button>
+                        </div>
+                    </div>
+                    <div class="banner-slider__slide">
+                        <img src="./img/banner-1.png" alt="">
+                        <div class="banner__forward">
+                            <h1 class="banner__title">
+                                It’s Time To Find The Rest
+                            </h1>
+                            <button class="banner__button btn">Plan Your Trip</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="banner-slider swiper">
+                    <div class="banner-slider__wrapper swiper-wrapper">
+                        <div class="banner-slider__slide swiper-slide">
+                            <div class="banner-slider__image">
+                                <img src="./img/main-banner.png" alt="">
+                            </div>
+                        </div>
+                        <div class="banner-slider__slide swiper-slide">
+                            <div class="banner-slider__image">
+                                <img src="./img/main-banner.png" alt="">
+                            </div>
+                        </div>
+                        <div class="banner-slider__slide swiper-slide">
+                            <div class="banner-slider__image">
+                                <img src="./img/main-banner.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-slider__buttons">
+                        <div class="banner-slider__prev swiper-button-prev"></div>
+                        <div class="banner-slider__next swiper-button-next"></div>
+                    </div>
+                    <div class="banner-slider__pagination swiper-pagination"></div>
+                </div> -->
+                <div class="discover">
+                    <form action="" class="discover__form">
+                        <div class="form__item">
+                            Plan Your Trip
+                        </div>
+                        <div class="form__item">
+                            <label for="destinations">Destinations</label>
+                            <select name="destinations" id="destinations" class="discover__destinations form__input">
+                                <option disabled selected>Select destination</option>
+                            </select>
+                        </div>
+                        <div class="form__item">
+                            <label for="check-in">Check In</label>
+                            <input type="date" name="check-in" id="check-in" class="discover__check-in form__input" required>
+                        </div>
+                        <div class="form__item">
+                            <label for="price" class="price-label">Price Range</label>
+                            <div class="price-range">
+                                <input type="text" value="" name="price" id="price-min" class="discover__price form__input" placeholder="$500" required>
+                                <div class="price-range__sep">-</div>
+                                <input type="text" value="" name="price" id="price-max" class="discover__price form__input" placeholder="$1,000" required>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <button class="discover__button btn">Discover Now</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="cards">
+                <div class="cards__item card-1">
+                    <img src="./img/cards/card-1.png" alt="" class="cards__icon">
+                    <div class="cards__title">
+                        Choose Destination
+                    </div>
+                    <p class="cards__text">
+                        Lorem Ipsum is simply dummy text of the printing setting
+                    </p>
+                </div>
+                <div class="cards__item card-2">
+                    <img src="./img/cards/card-2.png" alt="" class="cards__icon">
+                    <div class="cards__title">
+                        Explore The Place
+                    </div>
+                    <p class="cards__text">
+                        Lorem Ipsum is simply dummy text of the printing setting
+                    </p>
+                </div>
+                <div class="cards__item card-3">
+                    <img src="./img/cards/card-3.png" alt="" class="cards__icon cards__icon3">
+                    <div class="cards__title">
+                        Start Your Journey
+                    </div>
+                    <p class="cards__text">
+                        Lorem Ipsum is simply dummy text of the printing setting
+                    </p>
+                </div>
+                <div class="cards__item card-4">
+                    <img src="./img/cards/card-4.png" alt="" class="cards__icon cards__icon3">
+                    <div class="cards__title">
+                        Let’s Enjoy
+                    </div>
+                    <p class="cards__text">
+                        Lorem Ipsum is simply dummy text of the printing setting
+                    </p>
+                </div>
             </section>
         </main>
     </div>
