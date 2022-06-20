@@ -11,6 +11,8 @@ html {
 }
 
 body {
+    padding: 0 6.25vw;
+
     overflow-x: hidden;
     margin: 0;
     font-family: 'Noto Serif', serif;
@@ -18,10 +20,6 @@ body {
     font-size: 18px;
     line-height: 25px;
     color: #2C2C2C;
-}
-
-.wrapper {
-    padding: 0 6.25vw;
 }
 
 .btn {

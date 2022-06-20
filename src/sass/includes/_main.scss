@@ -223,10 +223,12 @@
 
     @media screen and (min-width: 1660px) {
         grid-template-columns: repeat(4, 326px);
+        margin-bottom: 270px;
     }
 }
 
 .destinations {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,16 +280,23 @@
                 grid-column: 1 / -1;
                 justify-self: center;
             }
+
+            @media screen and (min-width: 1660px) {
+                grid-column: auto;
+            }
         }
 
         @media screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
+
+        @media screen and (min-width: 1660px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     &__city {
-        position: relative;
         width: 330px;
         height: 400px;
         background-color: #C4C4C4;
@@ -317,6 +326,25 @@
             left: 30px;
         }
     }
+
+    @media screen and (min-width: 1660px) {
+        flex-direction: row;
+
+        &::after {
+            z-index: -1;
+            position: absolute;
+            content: '';
+            background-color: #F7F7F7;
+            right: -6.25vw;
+            width: 41vw;
+            height: calc(400px + 180px);
+
+        }
+    }
+
+    @media screen and (min-width: 1660px) {
+        margin-bottom: 270px;
+    }
 }
 
 .tours {
@@ -326,12 +354,59 @@
     align-items: center;
     justify-content: center;
 
-    &__title {
+    &__image {
+        &-wrapper {
+            position: relative;
+            display: none;
+    
+            &::before {
+                z-index: -1;
+                content: url(../img/tours/ractangle.svg);
+                position: absolute;
+                top: -55px;
+                right: -55px;
+            }
+    
+            &::after {
+                z-index: -1;
+                content: url(../img/tours/dots.svg);
+                position: absolute;
+                bottom: -78px;
+                left: -78px;
+            }
+    
+            @media screen and (min-width: 1660px) {
+                display: block;
+            }
 
-    }
+            div::after {
+                z-index: -1;
+                position: absolute;
+                content: '';
+                height: 90.7%;
+                width: 216px;
+                top: 32px;
+                right: 0;
+                background: #FFCBC4;
+                filter: blur(150px);
+            }
+        }
+
+        &-img {
+            position: relative;
+            display: block;
+        }
+    }    
 
     &__tips {
         margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+    }
+
+    &__list {
         display: flex;
         flex-direction: column;
         gap: 50px;
@@ -365,6 +440,20 @@
             line-height: 144%;
         }
     }
+
+    
+
+    @media screen and (min-width: 1660px) {
+        margin-top: 0;
+        flex-direction: row;
+        gap: 150px;
+        
+        &::before {
+            content: url(../img/tours/ellipse.svg);
+            top: 50%;
+            left: 0;
+        }
+    }
 }
 
 .choose {
@@ -373,10 +462,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    &__title {
-        
-    }
 
     &__cards {
         margin-top: 40px;
@@ -390,6 +475,10 @@
         @media screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (min-width: 1660px) {
+            grid-template-columns: repeat(3, 450px);
         }
     }
 
@@ -424,6 +513,11 @@
             font-weight: 700;
             font-size: 1rem;
             line-height: 1.0625rem;
+
+            @media screen and (min-width: 1660px) {
+                font-size: 1.5rem;
+                line-height: 2.0625rem;
+            }
         }
 
         &_bottom {
@@ -431,6 +525,10 @@
             align-items: center;
             justify-content: flex-start;
             flex-direction: row;
+
+            @media screen and (min-width: 1660px) {
+                justify-content: space-between;
+            }
         }
 
         &-price {
@@ -442,11 +540,15 @@
             &::before {
                 content: '$';
             }
+            
+            @media screen and (min-width: 1660px) {
+                font-size: 1.125rem;
+                line-height: 1.375rem;
+            }
         }
 
         &-rate {
             font-family: 'Product Sans', sans-serif;
-            font-weight: 400;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -454,12 +556,20 @@
             gap: 7px;
             color: #A79997;
             transform: scale(.75);
-            font-weight: 700;
+            font-weight: 400;
             font-size: 0.75rem;
             line-height: 1rem;
+            width: 100%;
             
             &::before {
                 content: url(../img/choose/stars-5.svg);
+            }
+
+            @media screen and (min-width: 1660px) {
+                font-size: 1.125rem;
+                line-height: 1.375rem;
+                transform: none;
+                justify-content: flex-end;
             }
         }
 
@@ -495,10 +605,27 @@
 
         &_1 {
             background-image: url(../img/choose/choose-1.png);
+
+            @media screen and (min-width: 1660px) {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: url(../img/choose/triangle.svg);
+                    width: 169px;
+                    height: 169px;
+                    top: -199px;
+                    right: 0;
+                }
+            }
         }
 
         &_2 {
             background-image: url(../img/choose/choose-2.png);
+
+            @media screen and (min-width: 1660px) {
+                transform: translateY(-199px);
+            }
         }
 
         &_3 {
@@ -508,16 +635,83 @@
                 grid-column: 1 / -1;
                 justify-self: center;
             }
+            @media screen and (min-width: 1660px) {
+                grid-column: auto;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: url(../img/choose/quater-sphere.svg);
+                    width: 169px;
+                    height: 169px;
+                    top: -199px;
+                    left: 0;
+                }
+
+            }
         }
+
+        @media screen and (min-width: 1660px) {
+            margin-top: 260px;
+            width: 450px;
+            height: 535px;
+        }
+    }
+
+    &__button {
+        grid-column: 1/-1;
+        width: 240px;
+        margin: 0 auto;
+        margin-top: 52.5px;
+
+        @media screen and (min-width: 1660px) {
+            grid-column: 1/-1;
+            margin-top: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    @media screen and (min-width: 1660px) {
+        margin-top: 250px;
     }
 }
 
 .reviews {
+    position: relative;
     margin-top: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    &__title {
+
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+
+            @media screen and (min-width: 1660px) {    
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 172px;
+                    height: 172px;
+                    background: #9CD9EC;
+                    filter: blur(70px);
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        @media screen and (min-width: 1660px) {
+            max-width: 710px;
+            text-align: center;
+        }
+    }
 
     &__wrapper {
         opacity: 1;
@@ -550,9 +744,20 @@
                 box-shadow: 0px 20px 40px rgba(227, 202, 202, 0.3);
             }
         }
-    }
 
-    
+        @media screen and (min-width: 1660px) {
+            position: relative;
+            &::before {
+                z-index: -1;
+                position: absolute;
+                content: url(../img/reviews/ellipse.svg);
+                width: 242px;
+                height: 242px;
+                bottom: -94px;
+                right: -110px;
+            }
+        }
+    }
 
     &__client {
         margin-top: 70px;
@@ -568,9 +773,6 @@
             height: 80px;
         }
 
-        &-right {
-
-        }
         &-img {
             height: 80px;
             width: 80px;
@@ -619,6 +821,7 @@
             height: 10px;
             border-radius: 50%;
             transition: .4s;
+            cursor: pointer;
 
             &::before {
                 content: '';
@@ -645,6 +848,62 @@
             }
         }
     }
+    &__background {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &_item {
+            position: absolute;
+
+            &-1 {
+                left: 185px;
+                top: 250px;
+            }
+
+            &-2 {
+                top: 50%;
+            }
+
+            &-3 {
+                left: 243px;
+                bottom: 217px;
+            }
+
+            &-4 {
+                bottom: 65px;
+                left: 15px;
+            }
+
+            &-5 {
+                top: 244px;
+                right: 0;
+            }
+
+            &-6 {
+                bottom: 230px;
+                right: 250px;
+            }
+
+            &-7 {
+                bottom: 25px;
+                right: 55px;
+            }
+        }
+
+        @media screen and (min-width: 1660px) {
+            display: block;
+        }
+    }
+    
+    @media screen and (min-width: 1660px) {
+        margin-top: 250px;
+        min-height: 785px;
+    }
 }
 
 .download {
@@ -660,7 +919,12 @@
     flex-direction: column;
 
     &__title {
-        
+        text-align: center;
+        @media screen and (min-width: 1660px) {
+            text-align: left;
+            align-self: flex-start;
+            max-width: 600px;
+        }
     }
 
     &__buttons {
@@ -668,5 +932,27 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &__apps {
+        display: none;
+        position: absolute;
+
+        @media screen and (min-width: 1660px) {
+            display: block;
+            bottom: -35px;
+            right: 90px;
+        }
+    }
+    
+    @media screen and (min-width: 1660px) {
+        width: auto;
+        position: relative;
+        align-items: flex-start;
+        left: auto;
+        min-height: 550px;
+        min-width: 1600px;
+        margin: 0 auto;
+        margin-top: 200px;
     }
 }

@@ -36,7 +36,7 @@
     
             &:hover {
                 background-color: #FFFFFF !important;
-                border: 2px solid #F5EBE9;
+                border: 2px solid #F5EBE9 !important;
     
                 #arrow-prev, #arrow-next {
                     fill: #ff715b
@@ -51,10 +51,6 @@
 
 
 .banner-slider {
-    
-    &__wrapper {
-
-    }
 
     &__slide {
         position: relative;

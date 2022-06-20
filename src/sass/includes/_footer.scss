@@ -10,20 +10,34 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: 768px) {
+            justify-content: center;
+        }
+
     }
 
     &-about {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         gap: 30px;
-        padding-right: 50px;
     }
 
     &-quote {
         text-align: center;
+        max-width: 450px;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;;
+        }
     }
 
     &-contacts {
@@ -32,15 +46,38 @@
         justify-content: space-between;
         flex-direction: column;
         gap: 15px;
+        width: 100%;
 
         &__link {
             color: #A79997;
             text-decoration: none;
             transition: .4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &_phone::before {
+                content: url(../img/contacts/phone.svg);
+            }
 
-                &:hover {
-                    color: #FF715B;
-                }
+            &_email::before {
+                content: url(../img/contacts/email.svg);
+            }
+
+            &_address::before {
+                content: url(../img/contacts/address.svg);
+            }
+
+            &::before {
+                padding-right: 15px;
+            }
+
+            &:hover {
+                color: #FF715B;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            align-items: flex-start;
         }
     }
 
@@ -48,6 +85,7 @@
         display: none;
         flex-direction: row;
         gap: 70px;
+        padding-left: 50px;
 
         &__title {
             font-family: 'Noto Serif';
@@ -65,6 +103,7 @@
         &__link {
             font-size: 1.125rem;
             line-height: 233%;
+            margin-top: 10px;
 
             &-link {
                 color: #A79997;
@@ -87,6 +126,32 @@
             display: none;
 
             @media screen and (min-width: 1140px) {
+                display: block;
+            }
+        }
+
+        &__newsletter {
+            display: none;
+
+            &-form {
+                margin-top: 45px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            &-input {
+                background: #F8F8F8;
+                border: 1px solid #F5EBE9;
+                height: 60px;
+                width: 400px;
+            }
+
+            &-button {
+                width: 200px;
+            }
+    
+            @media screen and (min-width: 1660px) {
                 display: block;
             }
         }
@@ -122,9 +187,11 @@
                     opacity: .7;
                 }
             }
-        }
+        }   
+    }
 
-        
+    @media screen and (min-width: 1660px) {
+        margin-top: 180px;
     }
 
 }

@@ -9,156 +9,159 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <a href="#" class="logo">
-                <div class="logo__wrapper">
-                    <img src="./img/logo-icon.svg" alt="" class="logo__icon">
-                    <img src="./img/logo-text.svg" alt="" class="logo__text">
-                </div>
-            </a>
-            <nav class="navbar">
-                <a href="#" class="navbar__link">Destination</a>
-                <a href="#" class="navbar__link">Offer</a>
-                <a href="#" class="navbar__link">Tour</a>
-                <a href="#" class="navbar__link">Blog</a>
-            </nav>
-            <div class="auth">
-                <a href="#" class="auth__auth">
-                    <a href="#" class="auth__link">My account</a>
-                </a>
-                <div class="auth__sep"></div>
-                <a href="#" class="auth__search">
-                    <img src="./img/search.svg" alt="" class="auth__search-icon">
-                </a>
+    <header class="header">
+        <a href="#" class="logo">
+            <div class="logo__wrapper">
+                <img src="./img/logo-icon.svg" alt="" class="logo__icon">
+                <img src="./img/logo-text.svg" alt="" class="logo__text">
             </div>
-            <button class="hamburger hamburger--collapse" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </header>
-        <main class="main">
-            <section class="banner">
-                <div class="banner-slider owl-carousel owl-theme" id="owl1">
-                    <div class="banner-slider__slide" data-index="1">
-                        <img src="./img/banner-1.png" alt="">
-                        <div class="banner__forward">
-                            <h1 class="banner__title">
-                                It’s Time To Explore The World
-                            </h1>
-                            <button class="banner__button btn">Plan Your Trip</button>
-                        </div>
-                    </div>
-                    <div class="banner-slider__slide" data-index="2">
-                        <img src="./img/banner-1.png" alt="">
-                        <div class="banner__forward">
-                            <h1 class="banner__title">
-                                It’s Time To Seak The Unknown
-                            </h1>
-                            <button class="banner__button btn">Plan Your Trip</button>
-                        </div>
-                    </div>
-                    <div class="banner-slider__slide" data-index="3">
-                        <img src="./img/banner-1.png" alt="">
-                        <div class="banner__forward">
-                            <h1 class="banner__title">
-                                It’s Time To Find The Rest
-                            </h1>
-                            <button class="banner__button btn">Plan Your Trip</button>
-                        </div>
+        </a>
+        <nav class="navbar">
+            <a href="#" class="navbar__link">Destination</a>
+            <a href="#" class="navbar__link">Offer</a>
+            <a href="#" class="navbar__link">Tour</a>
+            <a href="#" class="navbar__link">Blog</a>
+        </nav>
+        <div class="auth">
+            <a href="#" class="auth__auth">
+                <a href="#" class="auth__link">My account</a>
+            </a>
+            <div class="auth__sep"></div>
+            <a href="#" class="auth__search">
+                <img src="./img/search.svg" alt="" class="auth__search-icon">
+            </a>
+        </div>
+        <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </header>
+    <main class="main">
+        <section class="banner">
+            <div class="banner-slider owl-carousel owl-theme" id="owl1">
+                <div class="banner-slider__slide" data-index="1">
+                    <img src="./img/banner-1.png" alt="">
+                    <div class="banner__forward">
+                        <h1 class="banner__title">
+                            It’s Time To Explore The World
+                        </h1>
+                        <button class="banner__button btn">Plan Your Trip</button>
                     </div>
                 </div>
-                <div class="discover">
-                    <form action="" class="discover__form">
-                        <div class="form__item form__title">
-                            Plan Your Trip
-                        </div>
-                        <div class="form__item">
-                            <label for="destinations">Destinations</label>
-                            <select name="destinations" id="destinations" class="discover__destinations form__input">
-                                <option disabled selected>Select destination</option>
-                            </select>
-                        </div>
-                        <div class="form__item">
-                            <label for="check-in">Check In</label>
-                            <input type="date" name="check-in" id="check-in" class="discover__check-in form__input" required>
-                        </div>
-                        <div class="form__item">
-                            <label for="price" class="price-label">Price Range</label>
-                            <div class="price-range">
-                                <input type="text" value="" name="price" id="price-min" class="discover__price form__input" placeholder="$500" required>
-                                <div class="price-range__sep">-</div>
-                                <input type="text" value="" name="price" id="price-max" class="discover__price form__input" placeholder="$1,000" required>
-                            </div>
-                        </div>
-                        <div class="form__item">
-                            <button class="discover__button btn" onclick=>Discover Now</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <section class="cards">
-                <div class="cards__item card-1">
-                    <img src="./img/cards/card-1.png" alt="" class="cards__icon">
-                    <h3 class="cards__title">
-                        Choose Destination
-                    </h3>
-                    <p class="cards__text">
-                        Lorem Ipsum is simply dummy text of the printing setting
-                    </p>
-                </div>
-                <div class="cards__item card-2">
-                    <img src="./img/cards/card-2.png" alt="" class="cards__icon">
-                    <h3 class="cards__title">
-                        Explore The Place
-                    </h3>
-                    <p class="cards__text">
-                        Lorem Ipsum is simply dummy text of the printing setting
-                    </p>
-                </div>
-                <div class="cards__item card-3">
-                    <img src="./img/cards/card-3.png" alt="" class="cards__icon cards__icon3">
-                    <h3 class="cards__title">
-                        Start Your Journey
-                    </h3>
-                    <p class="cards__text">
-                        Lorem Ipsum is simply dummy text of the printing setting
-                    </p>
-                </div>
-                <div class="cards__item card-4">
-                    <img src="./img/cards/card-4.png" alt="" class="cards__icon cards__icon3">
-                    <h3 class="cards__title">
-                        Let’s Enjoy
-                    </h3>
-                    <p class="cards__text">
-                        Lorem Ipsum is simply dummy text of the printing setting
-                    </p>
-                </div>
-            </section>
-            <section class="destinations">
-                <div class="destinations_info">
-                    <h1 class="destinations__title section__title">
-                        <p>Top <span class="destinations__title_highlited">Destinations</span></p>In The World
-                    </h1>
-                    <p class="destinations__desc">
-                        It is a long established fact that a reader will be the distracted by the readable content of a page when looking at its layout from it.
-                    </p>
-                    <button class="destinations__button btn">Discover More</button>
-                </div>
-                <div class="destinations__cities">
-                    <div class="destinations__cities_cuba destinations__city">
-                        <span class="destinations__city-title">Cuba City</span>
-                    </div>
-                    <div class="destinations__cities_paris destinations__city">
-                        <span class="destinations__city-title">Paris</span>
-                    </div>
-                    <div class="destinations__cities_japan destinations__city">
-                        <span class="destinations__city-title">Japan</span>
+                <div class="banner-slider__slide" data-index="2">
+                    <img src="./img/banner-1.png" alt="">
+                    <div class="banner__forward">
+                        <h1 class="banner__title">
+                            It’s Time To Seak The Unknown
+                        </h1>
+                        <button class="banner__button btn">Plan Your Trip</button>
                     </div>
                 </div>
-            </section>
-            <section class="tours">
+                <div class="banner-slider__slide" data-index="3">
+                    <img src="./img/banner-1.png" alt="">
+                    <div class="banner__forward">
+                        <h1 class="banner__title">
+                            It’s Time To Find The Rest
+                        </h1>
+                        <button class="banner__button btn">Plan Your Trip</button>
+                    </div>
+                </div>
+            </div>
+            <div class="discover">
+                <form action="" class="discover__form">
+                    <div class="form__item form__title">
+                        Plan Your Trip
+                    </div>
+                    <div class="form__item">
+                        <label for="destinations">Destinations</label>
+                        <select name="destinations" id="destinations" class="discover__destinations form__input">
+                            <option disabled selected>Select destination</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <label for="check-in">Check In</label>
+                        <input type="date" name="check-in" id="check-in" class="discover__check-in form__input" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="price" class="price-label">Price Range</label>
+                        <div class="price-range">
+                            <input type="text" value="" name="price" id="price-min" class="discover__price form__input" placeholder="$500" required>
+                            <div class="price-range__sep">-</div>
+                            <input type="text" value="" name="price" id="price-max" class="discover__price form__input" placeholder="$1,000" required>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <button class="discover__button btn" onclick=>Discover Now</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="cards">
+            <div class="cards__item card-1">
+                <img src="./img/cards/card-1.png" alt="" class="cards__icon">
+                <h3 class="cards__title">
+                    Choose Destination
+                </h3>
+                <p class="cards__text">
+                    Lorem Ipsum is simply dummy text of the printing setting
+                </p>
+            </div>
+            <div class="cards__item card-2">
+                <img src="./img/cards/card-2.png" alt="" class="cards__icon">
+                <h3 class="cards__title">
+                    Explore The Place
+                </h3>
+                <p class="cards__text">
+                    Lorem Ipsum is simply dummy text of the printing setting
+                </p>
+            </div>
+            <div class="cards__item card-3">
+                <img src="./img/cards/card-3.png" alt="" class="cards__icon cards__icon3">
+                <h3 class="cards__title">
+                    Start Your Journey
+                </h3>
+                <p class="cards__text">
+                    Lorem Ipsum is simply dummy text of the printing setting
+                </p>
+            </div>
+            <div class="cards__item card-4">
+                <img src="./img/cards/card-4.png" alt="" class="cards__icon cards__icon3">
+                <h3 class="cards__title">
+                    Let’s Enjoy
+                </h3>
+                <p class="cards__text">
+                    Lorem Ipsum is simply dummy text of the printing setting
+                </p>
+            </div>
+        </section>
+        <section class="destinations">
+            <div class="destinations_info">
+                <h1 class="destinations__title section__title">
+                    <p>Top <span class="destinations__title_highlited">Destinations</span></p>In The World
+                </h1>
+                <p class="destinations__desc">
+                    It is a long established fact that a reader will be the distracted by the readable content of a page when looking at its layout from it.
+                </p>
+                <button class="destinations__button btn">Discover More</button>
+            </div>
+            <div class="destinations__cities">
+                <div class="destinations__cities_cuba destinations__city">
+                    <span class="destinations__city-title">Cuba City</span>
+                </div>
+                <div class="destinations__cities_paris destinations__city">
+                    <span class="destinations__city-title">Paris</span>
+                </div>
+                <div class="destinations__cities_japan destinations__city">
+                    <span class="destinations__city-title">Japan</span>
+                </div>
+            </div>
+        </section>
+        <section class="tours">
+            <div class="tours__image-wrapper">
+                <div><img src="./img/tours/tours.png" alt="" class="tours__image-img"></div>
+            </div>
+            <div class="tours__list">
                 <h1 class="tours__title section__title">
                     We Offering In Total 793 Tours Out The World
                 </h1>
@@ -199,165 +202,201 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="choose">
-                <h1 class="choose__title section__title">
-                    Choose Your Destination
-                </h1>
-                <div class="choose__cards">
-                    <div class="choose__card choose__card_1">
-                        <div class="choose__card-info">
-                            <div class="choose__card-info_left">
-                                <div class="choose__card-title">
-                                    Santorini, Oia Greece
-                                </div>
-                                <div class="choose__card_bottom">
-                                    <div class="choose__card-price">2000</div>
-                                    <div class="choose__card-rate">5k Reviews</div>
-                                </div>
+            </div>
+        </section>
+        <section class="choose">
+            <h1 class="choose__title section__title">
+                Choose Your Destination
+            </h1>
+            <div class="choose__cards">
+                <div class="choose__card choose__card_1">
+                    <div class="choose__card-info">
+                        <div class="choose__card-info_left">
+                            <div class="choose__card-title">
+                                Santorini, Oia Greece
                             </div>
-                            <div class="choose__card-button">
-                                <span class="choose__card-button-cross">+</span>
+                            <div class="choose__card_bottom">
+                                <div class="choose__card-price">2000</div>
+                                <div class="choose__card-rate">5k Reviews</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="choose__card choose__card_2">
-                        <div class="choose__card-info">
-                            <div class="choose__card-info_left">
-                                <div class="choose__card-title">
-                                    Santorini, Oia Greece
-                                </div>
-                                <div class="choose__card_bottom">
-                                    <div class="choose__card-price">2000</div>
-                                    <div class="choose__card-rate">5k Reviews</div>
-                                </div>
-                            </div>
-                            <div class="choose__card-button">
-                                <span class="choose__card-button-cross">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="choose__card choose__card_3">
-                        <div class="choose__card-info">
-                            <div class="choose__card-info_left">
-                                <div class="choose__card-title">
-                                    Santorini, Oia Greece
-                                </div>
-                                <div class="choose__card_bottom">
-                                    <div class="choose__card-price">2000</div>
-                                    <div class="choose__card-rate">5k Reviews</div>
-                                </div>
-                            </div>
-                            <div class="choose__card-button">
-                                <span class="choose__card-button-cross">+</span>
-                            </div>
+                        <div class="choose__card-button">
+                            <span class="choose__card-button-cross">+</span>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="reviews">
+                <div class="choose__card choose__card_2">
+                    <div class="choose__card-info">
+                        <div class="choose__card-info_left">
+                            <div class="choose__card-title">
+                                Santorini, Oia Greece
+                            </div>
+                            <div class="choose__card_bottom">
+                                <div class="choose__card-price">2000</div>
+                                <div class="choose__card-rate">5k Reviews</div>
+                            </div>
+                        </div>
+                        <div class="choose__card-button">
+                            <span class="choose__card-button-cross">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose__card choose__card_3">
+                    <div class="choose__card-info">
+                        <div class="choose__card-info_left">
+                            <div class="choose__card-title">
+                                Santorini, Oia Greece
+                            </div>
+                            <div class="choose__card_bottom">
+                                <div class="choose__card-price">2000</div>
+                                <div class="choose__card-rate">5k Reviews</div>
+                            </div>
+                        </div>
+                        <div class="choose__card-button">
+                            <span class="choose__card-button-cross">+</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn choose__button">View All Places</button>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="reviews__title-wrapper">
                 <h1 class="reviews__title section__title">
                     What Our Happy Customers Say About Us
                 </h1>
-                <div class="reviews-slider__wrapper">
-                    <div class="reviews-slider">
-                        <div class="reviews__wrapper">
-                            <div class="reviews__client">
-                                <div class="reviews__client-left">
-                                    <img src="./img/reviews/person-1.png" alt="" class="reviews__client-img">
-                                </div>
-                                <div class="reviews__client-right">
-                                    <h3 class="reviews__client-name">
-                                        Md Shamim Hossain  
-                                    </h3>
-                                    <h3 class="reviews__client-speciality">
-                                        UI/UX Designer
-                                    </h3>
-                                </div>
+            </div>
+            <div class="reviews-slider__wrapper">
+                <div class="reviews-slider">
+                    <div class="reviews__wrapper">
+                        <div class="reviews__client">
+                            <div class="reviews__client-left">
+                                <img src="./img/reviews/person-1.png" alt="" class="reviews__client-img">
                             </div>
-                            <div class="reviews__review">
-                                <p class="reviews__review-text">
-                                    Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
-                                </p>
+                            <div class="reviews__client-right">
+                                <h3 class="reviews__client-name">
+                                    Md Shamim Hossain  
+                                </h3>
+                                <h3 class="reviews__client-speciality">
+                                    UI/UX Designer
+                                </h3>
                             </div>
                         </div>
-                        <div class="reviews__buttons">
-                            <div class="reviews__buttons-btn review-btn-1 is-active" data-review="1"></div>
-                            <div class="reviews__buttons-btn review-btn-2" data-review="2"></div>
-                            <div class="reviews__buttons-btn review-btn-3" data-review="3"></div>
-                            <div class="reviews__buttons-btn review-btn-4" data-review="4"></div>
+                        <div class="reviews__review">
+                            <p class="reviews__review-text">
+                                Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                            </p>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="download">
-                <h1 class="download__title section__title">
-                    Download Now Travel Community Apps
-                </h1>
-                <div class="download__buttons">
-                    <a href="#" class="download__buttons-btn">
-                        <img src="./img/downloads/google.png" alt="Play Market" class="download__buttons-img">
-                    </a>
-                    <a href="#" class="download__buttons-btn">
-                        <img src="./img/downloads/apple.png" alt="App Store" class="download__buttons-img">
-                    </a>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer-main">
-                <div class="footer-about">
-                    <a href="#" class="logo">
-                        <div class="logo__wrapper">
-                            <img src="./img/logo-icon.svg" alt="" class="logo__icon">
-                            <img src="./img/logo-text.svg" alt="" class="logo__text">
-                        </div>
-                    </a>
-                    <p class="footer-quote">
-                        You can dream, create, design, and buildsa the most wonderful place.
-                    </p>
-                    <div class="footer-contacts">
-                        <a href="tel:+0123456987" class="footer-contacts__link">+0123 456 987</a>
-                        <a href="mailto:yourmailaddress@gmail.com" class="footer-contacts__link">yourmailaddress@gmail.com</a>
-                        <a href="#" class="footer-contacts__link">www.yourwebsitename.com</a>
+                    <div class="reviews__buttons">
+                        <div class="reviews__buttons-btn review-btn-1 is-active" data-review="1"></div>
+                        <div class="reviews__buttons-btn review-btn-2" data-review="2"></div>
+                        <div class="reviews__buttons-btn review-btn-3" data-review="3"></div>
+                        <div class="reviews__buttons-btn review-btn-4" data-review="4"></div>
                     </div>
-    
-                </div>
-                <div class="footer-right">
-                    <div class="footer-right__quick-links">
-                        <h1 class="footer-right__title">
-                            Quick Links
-                        </h1>
-                        <ul class="footer-right__links">
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">About Us</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Destinations</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Latest Blog</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Our Team</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-right__support">
-                        <h1 class="footer-right__title">
-                            Support
-                        </h1>
-                        <ul class="footer-right__links">
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Customer Support</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Privacy & Policy</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Terms & Condition</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Forum</a></li>
-                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Tour Guide</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-newsletter">
-    
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom__copyright">Copyright @2020 Ravel. Designed By <a href="#" class="footer-bottom__copyright-link">Md Shamim Hossain</a></div>
+            <div class="reviews__background">
+                <div class="reviews__background_item reviews__background_item-1">
+                    <img src="./img/reviews/others/1.png" alt="">
+                </div>
+                <div class="reviews__background_item reviews__background_item-2">
+                    <img src="./img/reviews/others/2.png" alt="">
+                </div>
+                <div class="reviews__background_item reviews__background_item-3">
+                    <img src="./img/reviews/others/3.png" alt="">
+                </div>
+                <div class="reviews__background_item reviews__background_item-4">
+                    <img src="./img/reviews/others/4.png" alt="">
+                </div>
+                <div class="reviews__background_item reviews__background_item-5">
+                    <img src="./img/reviews/others/5.png" alt="">
+                </div>
+                <div class="reviews__background_item reviews__background_item-6">
+                    <img src="./img/reviews/others/6.png" alt="">
+                </div>
+                <div class="reviews__background_item reviews__background_item-7">
+                    <img src="./img/reviews/others/7.png" alt="">
+                </div>
             </div>
-        </footer>
-    </div>
+        </section>
+        <section class="download">
+            <h1 class="download__title section__title">
+                Download Now Travel Community Apps
+            </h1>
+            <div class="download__buttons">
+                <a href="#" class="download__buttons-btn">
+                    <img src="./img/downloads/google.png" alt="Play Market" class="download__buttons-img">
+                </a>
+                <a href="#" class="download__buttons-btn">
+                    <img src="./img/downloads/apple.png" alt="App Store" class="download__buttons-img">
+                </a>
+            </div>
+            <div class="download__apps">
+                <img src="./img/downloads/apps.svg" alt="" class="download__apps-img">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-about">
+                <a href="#" class="logo">
+                    <div class="logo__wrapper">
+                        <img src="./img/logo-icon.svg" alt="" class="logo__icon">
+                        <img src="./img/logo-text.svg" alt="" class="logo__text">
+                    </div>
+                </a>
+                <p class="footer-quote">
+                    You can dream, create, design, and buildsa the most wonderful place.
+                </p>
+                <div class="footer-contacts">
+                    <a href="tel:+0123456987" class="footer-contacts__link footer-contacts__link_phone">+0123 456 987</a>
+                    <a href="mailto:yourmailaddress@gmail.com" class="footer-contacts__link footer-contacts__link_email">yourmailaddress@gmail.com</a>
+                    <a href="#" class="footer-contacts__link footer-contacts__link_address">www.yourwebsitename.com</a>
+                </div>
+
+            </div>
+            <div class="footer-right">
+                <div class="footer-right__quick-links">
+                    <h1 class="footer-right__title">
+                        Quick Links
+                    </h1>
+                    <ul class="footer-right__links">
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">About Us</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Destinations</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Latest Blog</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Our Team</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right__support">
+                    <h1 class="footer-right__title">
+                        Support
+                    </h1>
+                    <ul class="footer-right__links">
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Customer Support</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Privacy & Policy</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Terms & Condition</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Forum</a></li>
+                        <li class="footer-right__link"><a href="#" class="footer-right__link-link">Tour Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right__newsletter">
+                    <h1 class="footer-right__title">
+                        Newsletter
+                    </h1>
+                    <form class="footer-right__newsletter-form">
+                        <input type="email" class="footer-right__newsletter-input" placeholder="youremail@mail.ru">
+                        <button type="submit" class="btn footer-right__newsletter-button">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__copyright">Copyright @2020 Ravel. Designed By <a href="#" class="footer-bottom__copyright-link">Md Shamim Hossain</a></div>
+        </div>
+    </footer>
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/main.js"></script>

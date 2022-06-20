@@ -10,10 +10,15 @@ let tlDestinationsEnd = '';
 let tlToursEnd = '';
 let tlChooseEnd = '';
 
-if ($(window).width() >= 1660) {
+if ($(window).width() >= 1900) {
+    tlCardsEnd = '+=1300px';
+    tlDestinationsEnd = '+=1300px';
+    tlToursEnd = '+=1050px';
+    tlChooseEnd ='+=1600px';
+} else if ($(window).width() >= 1660) {
     tlCardsEnd = '+=1000px';
     tlDestinationsEnd = '+=1000px';
-    tlToursEnd = '+=1100px';
+    tlToursEnd = '+=1300px';
     tlChooseEnd ='+=1400px';
 } else if ($(window).width() >= 1024) {
     tlCardsEnd = '+=1000px';
@@ -33,10 +38,15 @@ if ($(window).width() >= 1660) {
 }
 
 let tlFunc = function () {
-    if ($(window).width() >= 1660) {
+    if ($(window).width() >= 1900) {
+        tlCardsEnd = '+=1300px';
+        tlDestinationsEnd = '+=1300px';
+        tlToursEnd = '+=1050px';
+        tlChooseEnd ='+=1600px';
+    } else if ($(window).width() >= 1660) {
         tlCardsEnd = '+=1000px';
         tlDestinationsEnd = '+=1000px';
-        tlToursEnd = '+=1100px';
+        tlToursEnd = '+=1300px';
         tlChooseEnd ='+=1400px';
     } else if ($(window).width() >= 1024) {
         tlCardsEnd = '+=1000px';
@@ -62,17 +72,17 @@ let tlFunc = function () {
             .from('.card-3', {x: -500, opacity: 0}, 2)
             .from('.card-4', {x: -500, opacity: 0}, 1);
         tlDestinations
-            .from('.destinations__cities_cuba', {x: -500, opacity: 0}, 1)
-            .from('.destinations__cities_paris', {x: 500, opacity: 0}, 1)
-            .from('.destinations__cities_japan', {y: 500, opacity: 0}, 2);
+            .from('.destinations__cities_cuba', {x: 1000, opacity: 0}, 1)
+            .from('.destinations__cities_paris', {x: 1500, opacity: 0}, 2)
+            .from('.destinations__cities_japan', {x: 2000, opacity: 0}, 3);
         tlTours
-            .from('.tours__tip-1', {x: -500, opacity: 0}, 1)
+            .from('.tours__tip-1', {x: 500, opacity: 0}, 1)
             .from('.tours__tip-2', {x: 500, opacity: 0}, 2)
-            .from('.tours__tip-3', {x: -500, opacity: 0}, 3);
+            .from('.tours__tip-3', {x: 500, opacity: 0}, 3);
         tlChoose
-            .from('.choose__card_1', {x: -500, opacity: 0}, 1)
-            .from('.choose__card_2', {x: 500, opacity: 0}, 1)
-            .from('.choose__card_3', {x: -500, opacity: 0}, 2);
+            .from('.choose__card_1', {y: 500, opacity: 0}, 2)
+            .from('.choose__card_2', {y: 500, opacity: 0}, 1)
+            .from('.choose__card_3', {y: 500, opacity: 0}, 2);
     } else if ($(window).width() >= 1024) {
         tlCards
             .from('.card-1', {x: -500, opacity: 0}, 1)
@@ -90,7 +100,8 @@ let tlFunc = function () {
         tlChoose
             .from('.choose__card_1', {x: -500, opacity: 0}, 1)
             .from('.choose__card_2', {x: 500, opacity: 0}, 1)
-            .from('.choose__card_3', {x: -500, opacity: 0}, 2);
+            .from('.choose__card_3', {y: 500, opacity: 0}, 2)
+            .from('.choose__button', {y: 500, opacity: 0}, 2);
     } else if ($(window).width() >= 768) {
         tlCards
             .from('.card-1', {x: -500, opacity: 0}, 1)
@@ -108,7 +119,8 @@ let tlFunc = function () {
         tlChoose
             .from('.choose__card_1', {x: -500, opacity: 0}, 1)
             .from('.choose__card_2', {x: 500, opacity: 0}, 1)
-            .from('.choose__card_3', {x: -500, opacity: 0}, 2);
+            .from('.choose__card_3', {y: 500, opacity: 0}, 2)
+            .from('.choose__button', {y: 500, opacity: 0}, 2);
     } else {
         tlCards
             .from('.card-1', {x: -500, opacity: 0}, 1)
@@ -152,7 +164,7 @@ let tlCards = gsap.timeline({
 let tlDestinations = gsap.timeline({
     scrollTrigger: {
         trigger: '.destinations__cities',
-        start: 'top 70%',
+        start: 'top center',
         end: tlDestinationsEnd,
         scrub: true,
         markers: false,
@@ -164,7 +176,7 @@ let tlDestinations = gsap.timeline({
 let tlTours = gsap.timeline({
     scrollTrigger: {
         trigger: '.tours__tips',
-        start: 'top 70%',
+        start: 'top 30%',
         end: tlToursEnd,
         scrub: true,
         markers: false,
@@ -179,7 +191,7 @@ let tlChoose = gsap.timeline({
         start: 'top 70%',
         end: tlChooseEnd,
         scrub: true,
-        markers: true,
+        markers: false,
         invalidateOnRefresh: true,
         immediateRender: false
     }
@@ -190,13 +202,7 @@ $(document).ready(function () {
     ScrollTrigger.refresh;
     tlFunc();
     $(window).on('resize', tlFunc);
-
 });
-
-
-
-
-
 
 // Слайдер
 import '../../manual_modules/OwlCarousel2-2.3.4//dist/owl.carousel.min.js';
@@ -234,18 +240,7 @@ $(document).ready(function(){
             }
         }
     });
-
-    $("#owl2").owlCarousel({
-        center: true,
-        items: 1,
-        loop: true,
-        margin: 10,
-        autoplay:true,
-        autoplayTimeout:10000,
-        autoplaySpeed:4000,
-        nav: false
-    });
-  });
+});
 
 function counter(event) {
   let elem = $('.owl-stage').find('.active').children('.banner-slider__slide').attr('data-index');
@@ -260,9 +255,6 @@ function counter(event) {
 
   $('.counter__counter').html(elem)
 };
-
-
-
 
 // навигация по отзывам
 let reviews = {
@@ -295,15 +287,8 @@ let reviews = {
 let activeBtn = 1;
 
 $('.reviews__buttons-btn').on('click', function (event) {
-    $(this).siblings('.reviews__buttons-btn').removeClass('is-active');
-    $(this).addClass('is-active');
-
     activeBtn = parseInt($(this).attr('data-review'));
-
-    $('.reviews__client-img').attr('src', reviews[activeBtn]['photo']);
-    $('.reviews__client-name').text(reviews[activeBtn]['name']);
-    $('.reviews__client-speciality').text(reviews[activeBtn]['speciality']);
-    $('.reviews__review-text').text(reviews[activeBtn]['text']);
+    changeReview(activeBtn);
 
 })
 
@@ -346,21 +331,6 @@ $.ajax({
     url: 'https://restcountries.com/v3.1/all?fields=name'
 })
 .done(success);
-
-// let sortCountries = function () {
-//     let selectList = $('#destinations option');
-
-//     selectList.sort(function(a,b){
-//         console.log(a.value, b.value);
-
-//         return (a=b, b=a);
-//     });
-
-//     $('#destinations').html(selectList);
-//     console.log(selectList);
-// }
-
-
 
 // Вывод суммы в виде долларов
 
@@ -426,35 +396,36 @@ $('.discover').on('click', function (event) {
 // нижний свайпер
 let touchstartX = 0
 let touchendX = 0
+
+let changeReview = function (btn) {
+    $('.reviews__wrapper').css({opacity: 0})
+    setTimeout(() => {
+        $('.reviews__buttons-btn').siblings('.reviews__buttons-btn').removeClass('is-active');
+        $(`.reviews__buttons-btn[data-review=${btn}]`).addClass('is-active');
+
+        $('.reviews__client-img').attr('src', reviews[btn]['photo']);
+        $('.reviews__client-name').text(reviews[btn]['name']);
+        $('.reviews__client-speciality').text(reviews[btn]['speciality']);
+        $('.reviews__review-text').text(reviews[btn]['text']);
+        setTimeout(() => {
+            $('.reviews__wrapper').css({opacity: 1})
+        }, 200);
+    }, 200);
+}
     
 function checkDirection() {
-    let changeReview = function () {
-    $('.reviews__wrapper').css({opacity: 0})
-        setTimeout(() => {
-            $('.reviews__buttons-btn').siblings('.reviews__buttons-btn').removeClass('is-active');
-            $(`.reviews__buttons-btn[data-review=${activeBtn}]`).addClass('is-active');
-
-            $('.reviews__client-img').attr('src', reviews[activeBtn]['photo']);
-            $('.reviews__client-name').text(reviews[activeBtn]['name']);
-            $('.reviews__client-speciality').text(reviews[activeBtn]['speciality']);
-            $('.reviews__review-text').text(reviews[activeBtn]['text']);
-            setTimeout(() => {
-                $('.reviews__wrapper').css({opacity: 1})
-            }, 200);
-        }, 200);
-    }
 
     if (touchendX < touchstartX)  {
         if (activeBtn <= 3) {
             activeBtn++; 
         } else activeBtn = 1;
-        changeReview();
+        changeReview(activeBtn);
     }
     if (touchendX > touchstartX) {
         if (activeBtn > 1) {
             activeBtn--;
         } else activeBtn = 4;
-        changeReview();
+        changeReview(activeBtn);
     }
 }
 $('.reviews-slider__wrapper').on('touchstart', e => {
