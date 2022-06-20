@@ -1,0 +1,130 @@
+.footer {
+    margin-top: 75px;
+    color: #A79997;
+    font-family: 'Product Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+
+    &-main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        padding-right: 50px;
+    }
+
+    &-quote {
+        text-align: center;
+    }
+
+    &-contacts {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+
+        &__link {
+            color: #A79997;
+            text-decoration: none;
+            transition: .4s;
+
+                &:hover {
+                    color: #FF715B;
+                }
+        }
+    }
+
+    &-right {
+        display: none;
+        flex-direction: row;
+        gap: 70px;
+
+        &__title {
+            font-family: 'Noto Serif';
+            font-weight: 700;
+            font-size: 1.75rem;
+            line-height: 1.8rem;
+            color: #000000;
+        }
+
+        &__links {
+            margin-top: 15px;
+            list-style: none;
+        }
+
+        &__link {
+            font-size: 1.125rem;
+            line-height: 233%;
+
+            &-link {
+                color: #A79997;
+                text-decoration: none;
+                transition: .4s;
+
+                &:hover {
+                    color: #FF715B;
+                }
+
+                &::before {
+                    content: '-';
+                    margin-right: 15px;
+                }
+            }
+
+        }
+
+        &__support {
+            display: none;
+
+            @media screen and (min-width: 1140px) {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #F5EBE9;
+        margin-top: 5.625rem;
+
+        &__copyright {
+            font-family: 'Product Sans', sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 144%;
+            text-align: center;
+            color: #A79997;
+            margin: 30px 0;
+
+            &-link {
+                transition: .4s;
+                color: #FF715B;
+                text-decoration: none;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+
+        
+    }
+
+}

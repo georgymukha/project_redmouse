@@ -5,24 +5,143 @@ import {ScrollTrigger} from "../../node_modules/gsap/dist/ScrollTrigger.min.js";
 gsap.registerPlugin(ScrollTrigger);
 
 
-let timelineEnd = '';
+let tlCardsEnd = '';
+let tlDestinationsEnd = '';
+let tlToursEnd = '';
+let tlChooseEnd = '';
 
-if ($(window).width() > 1200) {
-    timelineEnd = '+=80px';
-} else if ($(window).width() > 725) {
-    timelineEnd = '+=200px';
+if ($(window).width() >= 1660) {
+    tlCardsEnd = '+=1000px';
+    tlDestinationsEnd = '+=1000px';
+    tlToursEnd = '+=1100px';
+    tlChooseEnd ='+=1400px';
+} else if ($(window).width() >= 1024) {
+    tlCardsEnd = '+=1000px';
+    tlDestinationsEnd = '+=1000px';
+    tlToursEnd = '+=1100px';
+    tlChooseEnd ='+=1400px';
+} else if ($(window).width() >= 768) {
+    tlCardsEnd = '+=800px';
+    tlDestinationsEnd = '+=1000px';
+    tlToursEnd = '+=1100px';
+    tlChooseEnd ='+=1400px';
 } else {
-    timelineEnd = '+=1200px';
+    tlCardsEnd = '+=1200px';
+    tlDestinationsEnd = '+=1200px';
+    tlToursEnd = '+=800px';
+    tlChooseEnd ='+=1500px';
+}
+
+let tlFunc = function () {
+    if ($(window).width() >= 1660) {
+        tlCardsEnd = '+=1000px';
+        tlDestinationsEnd = '+=1000px';
+        tlToursEnd = '+=1100px';
+        tlChooseEnd ='+=1400px';
+    } else if ($(window).width() >= 1024) {
+        tlCardsEnd = '+=1000px';
+        tlDestinationsEnd = '+=1000px';
+        tlToursEnd = '+=1100px';
+        tlChooseEnd ='+=1400px';
+    } else if ($(window).width() >= 768) {
+        tlCardsEnd = '+=800px';
+        tlDestinationsEnd = '+=1000px';
+        tlToursEnd = '+=1100px';
+        tlChooseEnd ='+=1400px';
+    } else {
+        tlCardsEnd = '+=1200px';
+        tlDestinationsEnd = '+=1200px';
+        tlToursEnd = '+=800px';
+        tlChooseEnd ='+=1500px';
+    }
+
+    if ($(window).width() >= 1660) {
+        tlCards
+            .from('.card-1', {x: -500, opacity: 0}, 4)
+            .from('.card-2', {x: -500, opacity: 0}, 3)
+            .from('.card-3', {x: -500, opacity: 0}, 2)
+            .from('.card-4', {x: -500, opacity: 0}, 1);
+        tlDestinations
+            .from('.destinations__cities_cuba', {x: -500, opacity: 0}, 1)
+            .from('.destinations__cities_paris', {x: 500, opacity: 0}, 1)
+            .from('.destinations__cities_japan', {y: 500, opacity: 0}, 2);
+        tlTours
+            .from('.tours__tip-1', {x: -500, opacity: 0}, 1)
+            .from('.tours__tip-2', {x: 500, opacity: 0}, 2)
+            .from('.tours__tip-3', {x: -500, opacity: 0}, 3);
+        tlChoose
+            .from('.choose__card_1', {x: -500, opacity: 0}, 1)
+            .from('.choose__card_2', {x: 500, opacity: 0}, 1)
+            .from('.choose__card_3', {x: -500, opacity: 0}, 2);
+    } else if ($(window).width() >= 1024) {
+        tlCards
+            .from('.card-1', {x: -500, opacity: 0}, 1)
+            .from('.card-2', {x: 500, opacity: 0}, 1)
+            .from('.card-3', {x: -500, opacity: 0}, 2)
+            .from('.card-4', {x: 500, opacity: 0}, 2);
+        tlDestinations
+            .from('.destinations__cities_cuba', {x: -500, opacity: 0}, 1)
+            .from('.destinations__cities_paris', {x: 500, opacity: 0}, 1)
+            .from('.destinations__cities_japan', {y: 500, opacity: 0}, 2);
+        tlTours
+            .from('.tours__tip-1', {x: -500, opacity: 0}, 1)
+            .from('.tours__tip-2', {x: 500, opacity: 0}, 2)
+            .from('.tours__tip-3', {x: -500, opacity: 0}, 3);
+        tlChoose
+            .from('.choose__card_1', {x: -500, opacity: 0}, 1)
+            .from('.choose__card_2', {x: 500, opacity: 0}, 1)
+            .from('.choose__card_3', {x: -500, opacity: 0}, 2);
+    } else if ($(window).width() >= 768) {
+        tlCards
+            .from('.card-1', {x: -500, opacity: 0}, 1)
+            .from('.card-2', {x: 500, opacity: 0}, 1)
+            .from('.card-3', {x: -500, opacity: 0}, 2)
+            .from('.card-4', {x: 500, opacity: 0}, 2);
+        tlDestinations
+            .from('.destinations__cities_cuba', {x: -500, opacity: 0}, 1)
+            .from('.destinations__cities_paris', {x: 500, opacity: 0}, 1)
+            .from('.destinations__cities_japan', {y: 500, opacity: 0}, 2);
+        tlTours
+            .from('.tours__tip-1', {x: -500, opacity: 0}, 1)
+            .from('.tours__tip-2', {x: 500, opacity: 0}, 2)
+            .from('.tours__tip-3', {x: -500, opacity: 0}, 3);
+        tlChoose
+            .from('.choose__card_1', {x: -500, opacity: 0}, 1)
+            .from('.choose__card_2', {x: 500, opacity: 0}, 1)
+            .from('.choose__card_3', {x: -500, opacity: 0}, 2);
+    } else {
+        tlCards
+            .from('.card-1', {x: -500, opacity: 0}, 1)
+            .from('.card-2', {x: 500, opacity: 0}, 2)
+            .from('.card-3', {x: -500, opacity: 0}, 3)
+            .from('.card-4', {x: 500, opacity: 0}, 4);
+        tlDestinations
+            .from('.destinations__cities_cuba', {x: -500, opacity: 0}, 1)
+            .from('.destinations__cities_paris', {x: 500, opacity: 0}, 2)
+            .from('.destinations__cities_japan', {x: -500, opacity: 0}, 3);
+        tlTours
+            .from('.tours__tip-1', {x: -500, opacity: 0}, 1)
+            .from('.tours__tip-2', {x: 500, opacity: 0}, 2)
+            .from('.tours__tip-3', {x: -500, opacity: 0}, 3);
+        tlChoose
+            .from('.choose__card_1', {x: -500, opacity: 0}, 1)
+            .from('.choose__card_2', {x: 500, opacity: 0}, 2)
+            .from('.choose__card_3', {x: -500, opacity: 0}, 3);
+
+    }
 }
 
 
-ScrollTrigger.saveStyles('.card-1, .card-2, .card-3, .card-4')
+ScrollTrigger.saveStyles(`
+    .card-1, .card-2, .card-3, .card-4,
+    .destinations__cities_cuba, .destinations__cities_paris, .destinations__cities_japan,
+    .choose__card_1, .choose__card_2, .choose__card_3`)
 
-let timeline = gsap.timeline({
+let tlCards = gsap.timeline({
     scrollTrigger: {
         trigger: '.cards',
         start: 'top center',
-        end: timelineEnd,
+        end: tlCardsEnd,
         scrub: true,
         markers: false,
         invalidateOnRefresh: true,
@@ -30,42 +149,49 @@ let timeline = gsap.timeline({
     }
 });
 
-let tlFunc = function () {
-    if ($(window).width() > 1200) {
-        timelineEnd = '+=80px';
-    } else if ($(window).width() > 725) {
-        timelineEnd = '+=200px';
-    } else {
-        timelineEnd = '+=1200px';
-    };
-    if ($(window).width() > 1200) {
-        timeline
-            .from('.card-1', {x: -300, opacity: 0}, 1)
-            .from('.card-2', {y: 300, opacity: 0}, 2)
-            .from('.card-3', {x: -300, opacity: 0}, 3)
-            .from('.card-4', {x: 300, opacity: 0}, 4);
-    } else if ($(window).width() > 725) {
-        timeline
-            .from('.card-1', {x: -300, opacity: 0}, 1)
-            .from('.card-2', {y: 300, opacity: 0}, 2)
-            .from('.card-3', {x: -300, opacity: 0}, 3)
-            .from('.card-4', {x: 300, opacity: 0}, 4);
-    } else {
-        timeline
-            .from('.card-1', {x: -50, opacity: 0}, 1)
-            .from('.card-2', {x: 50, opacity: 0}, 2)
-            .from('.card-3', {x: -50, opacity: 0}, 3)
-            .from('.card-4', {x: 50, opacity: 0}, 4);
+let tlDestinations = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.destinations__cities',
+        start: 'top 70%',
+        end: tlDestinationsEnd,
+        scrub: true,
+        markers: false,
+        invalidateOnRefresh: true,
+        immediateRender: false
     }
-}
+});
+
+let tlTours = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.tours__tips',
+        start: 'top 70%',
+        end: tlToursEnd,
+        scrub: true,
+        markers: false,
+        invalidateOnRefresh: true,
+        immediateRender: false
+    }
+});
+
+let tlChoose = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.choose__cards',
+        start: 'top 70%',
+        end: tlChooseEnd,
+        scrub: true,
+        markers: true,
+        invalidateOnRefresh: true,
+        immediateRender: false
+    }
+});
+
 
 $(document).ready(function () {
     ScrollTrigger.refresh;
     tlFunc();
-    $(window).on('resize', tlFunc)
+    $(window).on('resize', tlFunc);
+
 });
-
-
 
 
 
@@ -87,25 +213,101 @@ $(document).ready(function(){
         </svg>
     
     `
-    $(".owl-carousel").owlCarousel({
+    $("#owl1").owlCarousel({
         center: true,
         items: 1,
         loop: true,
         margin: 10,
         autoplay:true,
-        autoplayTimeout:3000,
-        autoplaySpeed:2000,
+        autoplayTimeout:5000,
+        autoplaySpeed:3000,
         nav: false,
+        onInitialized  : counter,
+        onTranslated : counter,
         navText: [prevButton, nextButton],
         responsive: {
+            0: {
+                nav: false
+            },
             768: {
                 nav: true
             }
         }
     });
+
+    $("#owl2").owlCarousel({
+        center: true,
+        items: 1,
+        loop: true,
+        margin: 10,
+        autoplay:true,
+        autoplayTimeout:10000,
+        autoplaySpeed:4000,
+        nav: false
+    });
   });
 
-  $('.owl-nav').append
+function counter(event) {
+  let elem = $('.owl-stage').find('.active').children('.banner-slider__slide').attr('data-index');
+
+  if (!$('.counter__counter').length) {
+    $('.owl-nav').append(`
+    <div class="counter">
+        <div class="counter__sep"></div>
+        <div class="counter__counter"></div>
+    </div>`);
+  }
+
+  $('.counter__counter').html(elem)
+};
+
+
+
+
+// навигация по отзывам
+let reviews = {
+    1: {
+        photo: './img/reviews/person-1.png',
+        name: 'Md Shamim Hossain',
+        speciality: 'UI/UX designer',
+        text: 'Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brillianted environment within which to operate. The hotel is meticulous in its planning.'
+    },
+    2: {
+        photo: './img/reviews/person-2.png',
+        name: 'Albert Jackson',
+        speciality: 'FrontEnd Developer',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In quidem iste veritatis minima consectetur, suscipit blanditiis deserunt sequi sapiente dolorem!'
+    },
+    3: {
+        photo: './img/reviews/person-3.png',
+        name: 'Mike Lebowski',
+        speciality: 'BackEnd Developer',
+        text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ab, sapiente excepturi eos sint quam quaerat exercitationem maxime itaque ea, unde beatae sunt quidem! Itaque?'
+    },
+    4: {
+        photo: './img/reviews/person-4.png',
+        name: 'Md Shamim Hossain',
+        speciality: 'Motion Designer',
+        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ratione cumque sapiente molestiae, error dolores est at nihil provident aspernatur animi praesentium modi dolor fugit maxime accusamus!'
+    }
+}
+
+let activeBtn = 1;
+
+$('.reviews__buttons-btn').on('click', function (event) {
+    $(this).siblings('.reviews__buttons-btn').removeClass('is-active');
+    $(this).addClass('is-active');
+
+    activeBtn = parseInt($(this).attr('data-review'));
+
+    $('.reviews__client-img').attr('src', reviews[activeBtn]['photo']);
+    $('.reviews__client-name').text(reviews[activeBtn]['name']);
+    $('.reviews__client-speciality').text(reviews[activeBtn]['speciality']);
+    $('.reviews__review-text').text(reviews[activeBtn]['text']);
+
+})
+
+
 
 
 
@@ -217,4 +419,49 @@ $('.discover').on('click', function (event) {
     if (event.target === event.currentTarget) {
         $('.discover').toggleClass('is-active')
     }
+})
+
+
+
+// нижний свайпер
+let touchstartX = 0
+let touchendX = 0
+    
+function checkDirection() {
+    let changeReview = function () {
+    $('.reviews__wrapper').css({opacity: 0})
+        setTimeout(() => {
+            $('.reviews__buttons-btn').siblings('.reviews__buttons-btn').removeClass('is-active');
+            $(`.reviews__buttons-btn[data-review=${activeBtn}]`).addClass('is-active');
+
+            $('.reviews__client-img').attr('src', reviews[activeBtn]['photo']);
+            $('.reviews__client-name').text(reviews[activeBtn]['name']);
+            $('.reviews__client-speciality').text(reviews[activeBtn]['speciality']);
+            $('.reviews__review-text').text(reviews[activeBtn]['text']);
+            setTimeout(() => {
+                $('.reviews__wrapper').css({opacity: 1})
+            }, 200);
+        }, 200);
+    }
+
+    if (touchendX < touchstartX)  {
+        if (activeBtn <= 3) {
+            activeBtn++; 
+        } else activeBtn = 1;
+        changeReview();
+    }
+    if (touchendX > touchstartX) {
+        if (activeBtn > 1) {
+            activeBtn--;
+        } else activeBtn = 4;
+        changeReview();
+    }
+}
+$('.reviews-slider__wrapper').on('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+$('.reviews-slider__wrapper').on('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkDirection()
 })

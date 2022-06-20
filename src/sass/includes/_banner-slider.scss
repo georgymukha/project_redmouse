@@ -7,41 +7,47 @@
 }
 
 
-.owl {
-    &-dots {
-        display: none;
-    }
-
-    &-nav {
-        display: flex;
-        gap: 20px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 30px;
-    }
-
-    &-prev, &-next {
-        background-color: #ff715b !important;
-        width: 47px;
-        height: 47px;
-        transition: .4s;
-
-        #arrow-prev, #arrow-next {
-            transition: .4s;
+.banner-slider {
+    .owl {
+        &-dots {
+            display: none;
         }
-
-        &:hover {
-            background-color: #FFFFFF !important;
-            border: 2px solid #F5EBE9;
-
+    
+        &-nav {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+    
+        &-prev, &-next {
+            border: none;
+            outline: none;
+            background-color: #ff715b !important;
+            width: 47px;
+            height: 47px;
+            transition: .4s;
+    
             #arrow-prev, #arrow-next {
-                fill: #ff715b
+                transition: .4s;
             }
-            
+    
+            &:hover {
+                background-color: #FFFFFF !important;
+                border: 2px solid #F5EBE9;
+    
+                #arrow-prev, #arrow-next {
+                    fill: #ff715b
+                }
+                
+            }
         }
     }
 }
+
+
 
 
 .banner-slider {
@@ -56,6 +62,9 @@
 
         img {
             max-width: 100%;
+        }
+        @media screen and (min-width: 1660px) {
+            position: relative;
         }
     }
 
@@ -75,5 +84,33 @@
         position: absolute;
         
     }
+    
+}
 
+.counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    &__sep {
+        width: 4vw;
+        height: 2px;
+
+        background-color: #F5EBE9;
+        margin-right: 30px;
+
+        @media screen and (min-width: 1800px) {
+            width: 12.1875vw;
+        }
+    }
+
+    &__counter {
+        font-family: 'Noto Serif';
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.0625rem;
+        text-align: center;
+        color: #FF715B;
+    }
 }

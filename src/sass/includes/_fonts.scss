@@ -24,3 +24,12 @@
          url('../fonts/NotoSerif/noto-serif-v21-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/NotoSerif/noto-serif-v21-latin_cyrillic-700.svg#NotoSerif') format('svg'); /* Legacy iOS */
   }
+
+@font-face {
+     font-family: 'Product Sans';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+          url('../fonts/ProductSans/ProductSans-Regular.woff') format('woff'),
+          url('../fonts/ProductSans/ProductSans-Regular.ttf') format('truetype');
+}

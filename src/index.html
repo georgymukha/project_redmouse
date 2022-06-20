@@ -40,8 +40,8 @@
         </header>
         <main class="main">
             <section class="banner">
-                <div class="banner-slider owl-carousel owl-theme">
-                    <div class="banner-slider__slide">
+                <div class="banner-slider owl-carousel owl-theme" id="owl1">
+                    <div class="banner-slider__slide" data-index="1">
                         <img src="./img/banner-1.png" alt="">
                         <div class="banner__forward">
                             <h1 class="banner__title">
@@ -50,8 +50,8 @@
                             <button class="banner__button btn">Plan Your Trip</button>
                         </div>
                     </div>
-                    <div class="banner-slider__slide">
-                        <img src="./img/banner-2.jpg" alt="">
+                    <div class="banner-slider__slide" data-index="2">
+                        <img src="./img/banner-1.png" alt="">
                         <div class="banner__forward">
                             <h1 class="banner__title">
                                 It’s Time To Seak The Unknown
@@ -59,7 +59,7 @@
                             <button class="banner__button btn">Plan Your Trip</button>
                         </div>
                     </div>
-                    <div class="banner-slider__slide">
+                    <div class="banner-slider__slide" data-index="3">
                         <img src="./img/banner-1.png" alt="">
                         <div class="banner__forward">
                             <h1 class="banner__title">
@@ -69,35 +69,9 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- <div class="banner-slider swiper">
-                    <div class="banner-slider__wrapper swiper-wrapper">
-                        <div class="banner-slider__slide swiper-slide">
-                            <div class="banner-slider__image">
-                                <img src="./img/main-banner.png" alt="">
-                            </div>
-                        </div>
-                        <div class="banner-slider__slide swiper-slide">
-                            <div class="banner-slider__image">
-                                <img src="./img/main-banner.png" alt="">
-                            </div>
-                        </div>
-                        <div class="banner-slider__slide swiper-slide">
-                            <div class="banner-slider__image">
-                                <img src="./img/main-banner.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-slider__buttons">
-                        <div class="banner-slider__prev swiper-button-prev"></div>
-                        <div class="banner-slider__next swiper-button-next"></div>
-                    </div>
-                    <div class="banner-slider__pagination swiper-pagination"></div>
-                </div> -->
                 <div class="discover">
                     <form action="" class="discover__form">
-                        <div class="form__item">
+                        <div class="form__item form__title">
                             Plan Your Trip
                         </div>
                         <div class="form__item">
@@ -119,7 +93,7 @@
                             </div>
                         </div>
                         <div class="form__item">
-                            <button class="discover__button btn">Discover Now</button>
+                            <button class="discover__button btn" onclick=>Discover Now</button>
                         </div>
                     </form>
                 </div>
@@ -127,42 +101,262 @@
             <section class="cards">
                 <div class="cards__item card-1">
                     <img src="./img/cards/card-1.png" alt="" class="cards__icon">
-                    <div class="cards__title">
+                    <h3 class="cards__title">
                         Choose Destination
-                    </div>
+                    </h3>
                     <p class="cards__text">
                         Lorem Ipsum is simply dummy text of the printing setting
                     </p>
                 </div>
                 <div class="cards__item card-2">
                     <img src="./img/cards/card-2.png" alt="" class="cards__icon">
-                    <div class="cards__title">
+                    <h3 class="cards__title">
                         Explore The Place
-                    </div>
+                    </h3>
                     <p class="cards__text">
                         Lorem Ipsum is simply dummy text of the printing setting
                     </p>
                 </div>
                 <div class="cards__item card-3">
                     <img src="./img/cards/card-3.png" alt="" class="cards__icon cards__icon3">
-                    <div class="cards__title">
+                    <h3 class="cards__title">
                         Start Your Journey
-                    </div>
+                    </h3>
                     <p class="cards__text">
                         Lorem Ipsum is simply dummy text of the printing setting
                     </p>
                 </div>
                 <div class="cards__item card-4">
                     <img src="./img/cards/card-4.png" alt="" class="cards__icon cards__icon3">
-                    <div class="cards__title">
+                    <h3 class="cards__title">
                         Let’s Enjoy
-                    </div>
+                    </h3>
                     <p class="cards__text">
                         Lorem Ipsum is simply dummy text of the printing setting
                     </p>
                 </div>
             </section>
+            <section class="destinations">
+                <div class="destinations_info">
+                    <h1 class="destinations__title section__title">
+                        <p>Top <span class="destinations__title_highlited">Destinations</span></p>In The World
+                    </h1>
+                    <p class="destinations__desc">
+                        It is a long established fact that a reader will be the distracted by the readable content of a page when looking at its layout from it.
+                    </p>
+                    <button class="destinations__button btn">Discover More</button>
+                </div>
+                <div class="destinations__cities">
+                    <div class="destinations__cities_cuba destinations__city">
+                        <span class="destinations__city-title">Cuba City</span>
+                    </div>
+                    <div class="destinations__cities_paris destinations__city">
+                        <span class="destinations__city-title">Paris</span>
+                    </div>
+                    <div class="destinations__cities_japan destinations__city">
+                        <span class="destinations__city-title">Japan</span>
+                    </div>
+                </div>
+            </section>
+            <section class="tours">
+                <h1 class="tours__title section__title">
+                    We Offering In Total 793 Tours Out The World
+                </h1>
+                <div class="tours__tips">
+                    <div class="tours__tip tours__tip-1">
+                        <div class="tours__tip-icon">
+                            <img src="./img/tours/icon-1.svg" alt="" class="tours__tip-icon-img">
+                        </div>
+                        <div class="tours__tip-info">
+                            <h3 class="tours__tip-title">
+                                Best Travel Guide Always For Your Services
+                            </h3>
+                            <p class="tours__tip-desc">
+                                Travel has helped us to understandsa the meaning of life and it has helped us become better people. Each time we travel, we see the world with new eyes. Travel has helped us to understand the meaning of life
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="tours__tip-sep tours__tip-2">
+                    <div class="tours__tip tours__tip-2">
+                        <div class="tours__tip-icon">
+                            <img src="./img/tours/icon-2.svg" alt="" class="tours__tip-icon-img">
+                        </div>
+                        <div class="tours__tip-info">
+                            <h3 class="tours__tip-title">
+                                World Class Services Provide For You
+                            </h3>
+                        </div>
+                    </div>
+                    <hr class="tours__tip-sep tours__tip-3">
+                    <div class="tours__tip tours__tip-3">
+                        <div class="tours__tip-icon">
+                            <img src="./img/tours/icon-3.svg" alt="" class="tours__tip-icon-img">
+                        </div>
+                        <div class="tours__tip-info">
+                            <h3 class="tours__tip-title">
+                                24/7 Strong Customer Support
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="choose">
+                <h1 class="choose__title section__title">
+                    Choose Your Destination
+                </h1>
+                <div class="choose__cards">
+                    <div class="choose__card choose__card_1">
+                        <div class="choose__card-info">
+                            <div class="choose__card-info_left">
+                                <div class="choose__card-title">
+                                    Santorini, Oia Greece
+                                </div>
+                                <div class="choose__card_bottom">
+                                    <div class="choose__card-price">2000</div>
+                                    <div class="choose__card-rate">5k Reviews</div>
+                                </div>
+                            </div>
+                            <div class="choose__card-button">
+                                <span class="choose__card-button-cross">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__card choose__card_2">
+                        <div class="choose__card-info">
+                            <div class="choose__card-info_left">
+                                <div class="choose__card-title">
+                                    Santorini, Oia Greece
+                                </div>
+                                <div class="choose__card_bottom">
+                                    <div class="choose__card-price">2000</div>
+                                    <div class="choose__card-rate">5k Reviews</div>
+                                </div>
+                            </div>
+                            <div class="choose__card-button">
+                                <span class="choose__card-button-cross">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__card choose__card_3">
+                        <div class="choose__card-info">
+                            <div class="choose__card-info_left">
+                                <div class="choose__card-title">
+                                    Santorini, Oia Greece
+                                </div>
+                                <div class="choose__card_bottom">
+                                    <div class="choose__card-price">2000</div>
+                                    <div class="choose__card-rate">5k Reviews</div>
+                                </div>
+                            </div>
+                            <div class="choose__card-button">
+                                <span class="choose__card-button-cross">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews">
+                <h1 class="reviews__title section__title">
+                    What Our Happy Customers Say About Us
+                </h1>
+                <div class="reviews-slider__wrapper">
+                    <div class="reviews-slider">
+                        <div class="reviews__wrapper">
+                            <div class="reviews__client">
+                                <div class="reviews__client-left">
+                                    <img src="./img/reviews/person-1.png" alt="" class="reviews__client-img">
+                                </div>
+                                <div class="reviews__client-right">
+                                    <h3 class="reviews__client-name">
+                                        Md Shamim Hossain  
+                                    </h3>
+                                    <h3 class="reviews__client-speciality">
+                                        UI/UX Designer
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="reviews__review">
+                                <p class="reviews__review-text">
+                                    Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reviews__buttons">
+                            <div class="reviews__buttons-btn review-btn-1 is-active" data-review="1"></div>
+                            <div class="reviews__buttons-btn review-btn-2" data-review="2"></div>
+                            <div class="reviews__buttons-btn review-btn-3" data-review="3"></div>
+                            <div class="reviews__buttons-btn review-btn-4" data-review="4"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="download">
+                <h1 class="download__title section__title">
+                    Download Now Travel Community Apps
+                </h1>
+                <div class="download__buttons">
+                    <a href="#" class="download__buttons-btn">
+                        <img src="./img/downloads/google.png" alt="Play Market" class="download__buttons-img">
+                    </a>
+                    <a href="#" class="download__buttons-btn">
+                        <img src="./img/downloads/apple.png" alt="App Store" class="download__buttons-img">
+                    </a>
+                </div>
+            </section>
         </main>
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <div class="logo__wrapper">
+                            <img src="./img/logo-icon.svg" alt="" class="logo__icon">
+                            <img src="./img/logo-text.svg" alt="" class="logo__text">
+                        </div>
+                    </a>
+                    <p class="footer-quote">
+                        You can dream, create, design, and buildsa the most wonderful place.
+                    </p>
+                    <div class="footer-contacts">
+                        <a href="tel:+0123456987" class="footer-contacts__link">+0123 456 987</a>
+                        <a href="mailto:yourmailaddress@gmail.com" class="footer-contacts__link">yourmailaddress@gmail.com</a>
+                        <a href="#" class="footer-contacts__link">www.yourwebsitename.com</a>
+                    </div>
+    
+                </div>
+                <div class="footer-right">
+                    <div class="footer-right__quick-links">
+                        <h1 class="footer-right__title">
+                            Quick Links
+                        </h1>
+                        <ul class="footer-right__links">
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">About Us</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Destinations</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Latest Blog</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Our Team</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-right__support">
+                        <h1 class="footer-right__title">
+                            Support
+                        </h1>
+                        <ul class="footer-right__links">
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Customer Support</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Privacy & Policy</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Terms & Condition</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Forum</a></li>
+                            <li class="footer-right__link"><a href="#" class="footer-right__link-link">Tour Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom__copyright">Copyright @2020 Ravel. Designed By <a href="#" class="footer-bottom__copyright-link">Md Shamim Hossain</a></div>
+            </div>
+        </footer>
     </div>
 
     <script src="./js/jquery.min.js"></script>
